@@ -1,6 +1,6 @@
 ﻿namespace AutoBogusResearch;
 
-public enum UserTypeEnum
+public enum UserType
 {
     Anonymous,
     Basic,

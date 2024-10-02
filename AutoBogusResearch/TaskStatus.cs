@@ -1,6 +1,6 @@
 ﻿namespace AutoBogusResearch;
 
-public enum TaskStatusEnum
+public enum TaskStatus
 {
     NotStarted,
     Removed,

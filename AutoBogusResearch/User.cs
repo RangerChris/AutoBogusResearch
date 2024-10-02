@@ -4,7 +4,7 @@ namespace AutoBogusResearch;
 
 public class User : BaseEntity
 {
-    public UserTypeEnum UserType { get; }
+    public UserType UserType { get; }
 
     public IEnumerable<Project>? Projects { get; }
 
