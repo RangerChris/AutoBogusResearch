@@ -4,11 +4,11 @@ namespace AutoBogusResearch;
 
 public class User : BaseEntity
 {
-    public UserTypeEnum UserType { get; set; }
+    public UserTypeEnum UserType { get; }
 
-    public IEnumerable<Project>? Projects { get; set; }
+    public IEnumerable<Project>? Projects { get; }
 
-    public string? Email { get; set; }
+    public string? Email { get; }
 
     public override string ToString()
     {

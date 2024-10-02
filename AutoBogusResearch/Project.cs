@@ -13,7 +13,7 @@ public class Project : BaseEntity
 
     public User? Owner { get; set; }
 
-    public IEnumerable<User> Members { get; set; } = Enumerable.Empty<User>();
+    public IEnumerable<User> Members { get; set; } = [];
 
     public override string ToString()
     {

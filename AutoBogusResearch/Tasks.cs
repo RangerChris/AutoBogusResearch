@@ -4,7 +4,7 @@ namespace AutoBogusResearch;
 
 public class Tasks : BaseEntity
 {
-    public TaskStatusEnum Status { get; set; }
+    public TaskStatusEnum Status { get; }
 
     public string? Description { get; set; }
 

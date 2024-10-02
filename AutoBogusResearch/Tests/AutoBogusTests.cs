@@ -5,15 +5,8 @@ using Xunit.Abstractions;
 
 namespace AutoBogusResearch.Tests;
 
-public class AutoBogusTests
+public class AutoBogusTests(ITestOutputHelper testOutputHelper)
 {
-    private readonly ITestOutputHelper _testOutputHelper;
-
-    public AutoBogusTests(ITestOutputHelper testOutputHelper)
-    {
-        _testOutputHelper = testOutputHelper;
-    }
-
     /// <summary>
     ///     Generates a basic object with all properties set
     /// </summary>
@@ -22,7 +15,7 @@ public class AutoBogusTests
     {
         var sut = AutoFaker.Generate<User>();
         sut.Should().NotBeNull();
-        _testOutputHelper.WriteLine(sut.ToString());
+        testOutputHelper.WriteLine(sut.ToString());
     }
 
     /// <summary>
@@ -42,7 +35,7 @@ public class AutoBogusTests
         sut.Owner.Should().NotBeNull();
         sut.Sprints.Should().NotBeNullOrEmpty();
         sut.Members.Should().NotBeNullOrEmpty();
-        _testOutputHelper.WriteLine(sut.ToString());
+        testOutputHelper.WriteLine(sut.ToString());
     }
 
     /// <summary>
@@ -58,6 +51,6 @@ public class AutoBogusTests
         sut.Owner.Should().BeNull();
         sut.Sprints.Should().BeNullOrEmpty();
         sut.Members.Should().BeNullOrEmpty();
-        _testOutputHelper.WriteLine(sut.ToString());
+        testOutputHelper.WriteLine(sut.ToString());
     }
 }

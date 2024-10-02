@@ -8,7 +8,7 @@ public class Sprint : BaseEntity
     public DateTime End { get; set; }
     public double StoryPoints { get; set; }
 
-    public List<Tasks>? Tasks { get; set; } = new();
+    public List<Tasks>? Tasks { get; } = [];
 
     public override string ToString()
     {
